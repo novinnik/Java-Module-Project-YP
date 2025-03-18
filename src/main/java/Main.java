@@ -24,14 +24,14 @@ public class Main {
             int speedAuto;
 
             while (true) {
-                System.out.println(" - Введите скорость авто №" + numberAuto);
+                System.out.println(" - Введите скорость авто (1-250) №" + numberAuto);
 
                 if (scanner.hasNextInt()){
                     speedAuto = scanner.nextInt();
-                    if (speedAuto >= 0 && speedAuto <= 250) {
+                    if (speedAuto > 0 && speedAuto <= 250) {
                         break;
                     } else {
-                        System.out.println("Указана скорость в неверном диапазоне (0-250)!");
+                        System.out.println("Указана скорость в неверном диапазоне (1-250)!");
                     }
                 } else {
                     scanner.next();
